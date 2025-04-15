@@ -71,8 +71,8 @@ Try accessing the `return_value` identifier without prepending `$`.
 **What happens and why?**
 
 <details>
-    <summary>You Answer</summary>
-    ......
+    If we try to output the result of the calculation using only the variable name return_value without the preceding $, the echo command only outputs the character string “return_value”.
+    The preceding $ character tells the shell that it should not output the string “return_value” at this point, but the variable content of return_value.
 </details>
 
 ### Task 3: Function-Identifiers
@@ -97,7 +97,7 @@ and pressing `enter`.
 
 <details>
     <summary>Calling a Function</summary>
-    Include a screenshot of your function-call!
+    ![Kai Mischke (kami) plus_func](https://github.com/user-attachments/assets/4fc56c3a-12d0-4bc4-911c-372c744b6dab)
 </details>
 
 ### Task 4: Handling Parameters
@@ -263,7 +263,11 @@ These examples demonstrate various fundamental operations in Bash scripting, inc
     <summary>Your Function</summary>
     
 ```bash
-your code
+echo {1..5}
+sum=$((1 + 2 + 3 + 4 + 5))
+echo "Die Summe von 1 + 2 + 3 + 4 + 5 = $sum"
+diff=$((5 - 4 - 3 - 2 - 1))
+echo "Die Differenz von 5 - 4 - 3 - 2 - 1 = $diff"
 ```
 
 </details>
@@ -301,7 +305,8 @@ cat ./function
 **What happend?**
 <details>
     <summary>Your Explaination</summary>
-    .....
+    When using the > operator, the first function in the ./function file was overwritten by the second function. When using the >> operator, the second function in the file is appended to the 
+    first function. When cat ./functions is output, both functions are then contained in the file.
 
 </details>
 
@@ -344,7 +349,7 @@ You can use a shorthand within your calls to add this string as a prefix to any 
 **Look at task 6 again. What is the complete filepath of your functions file?**
 <details>
     <summary>Your Answer</summary>
-    ....
+    /home/kami/functions
 </details>
 
 All filenames start with a `/`. 
@@ -439,7 +444,10 @@ When you finished that tutorial, open a file in your home directory and manipula
 **How do you save a buffer to a new filename from within `vim`?**
 <details>
     <summary>Your Answer</summary>
-    .....
+    [ESC] to exit Insert mode and then
+    --> :w 
+    or if you want to save and quit
+    --> :wq
 </details>
  
 
